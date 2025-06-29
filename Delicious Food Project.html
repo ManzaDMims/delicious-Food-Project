@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Delicious Food Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <!-- W3CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    :root {
+      --accent-color: #e74c3c;
+      --bg-gradient: linear-gradient(to right, #fceabb, #f8b500);
+      --text-color: #333;
+      --card-bg: #ffffff;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+    }
+
+    .w3-card,
+    .w3-container,
+    .w3-row-padding {
+      background-color: var(--card-bg) !important;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+    }
+
+    .w3-bar-item,
+    .w3-button {
+      font-weight: 500;
+    }
+
+    .w3-bar-item:hover,
+    .w3-button:hover {
+      background-color: var(--accent-color) !important;
+      color: white !important;
+    }
+
+    .w3-tag {
+      background-color: var(--accent-color) !important;
+      color: white;
+      border-radius: 5px;
+      padding: 4px 8px;
+      display: inline-block;
+    }
+
+    footer {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      border-top: 2px solid #ddd;
+      margin-top: 3rem;
+    }
+
+    footer h3 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .w3-ul img {
+      border-radius: 6px;
+    }
+
+    .w3-image {
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .w3-top {
+      background-color: #fff;
+      border-bottom: 2px solid #eee;
+    }
+
+    .w3-padding-32,
+    .w3-padding-16 {
+      padding-top: 32px !important;
+      padding-bottom: 32px !important;
+    }
+
+    .w3-center h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left"
+     style="display:none;z-index:2;width:40%;min-width:300px"
+     id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+  <a href="#menu" onclick="w3_close()" class="w3-bar-item w3-button">Menu</a>
+</nav>
+
+<!-- Top menu -->
+<header class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">Mail</div>
+    <div class="w3-center w3-padding-16">My Food</div>
+  </div>
+</header>
+
+<!-- Page Content -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- About Section -->
+  <section id="about" class="w3-container w3-padding-32 w3-center">
+    <h3>About Jose Gazza, The Food Man</h3>
+    <img src="Culinary Chef.jpg" alt="Jose Gazza" class="w3-image" style="margin:auto" width="800" height="533">
+    <div class="w3-padding-32">
+      <h4><b>I am Who I Am!</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>
+        Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest in culinary arts.
+        I completed culinary school and got certified to be an expert in cooking. It's an art form to me and I'm here to share it with the world.
+      </p>
+    </div>
+    <hr>
+  </section>
+
+  <!-- Food Menu -->
+  <section id="menu">
+    <h2 class="w3-center">Our Food Gallery</h2>
+
+    <!-- Grid 1 -->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+      <div class="w3-quarter">
+        <img src="New Orleans Food.jpg" alt="Jumbalaya" style="width:100%">
+        <h3>Jumbalaya</h3>
+        <p>A New Orleans classic made with chicken, seafood, sausage, peppers, onions, spices, and rice.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="New York Food Steak.jpg" alt="Steak" style="width:100%">
+        <h3>New York Steak</h3>
+        <p>A legendary cut served with creamed spinach and baked potatoes in a throwback dining room.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="Florida Food Fries.jpg" alt="Fries" style="width:100%">
+        <h3>Mind-Blowing Fries</h3>
+        <p>Crispy, charred outside and soft inside — these fries are the ultimate sidekick.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="Chicago Food Pizza.jpg" alt="Chicago Pizza" style="width:100%">
+        <h3>Chicago Deep Dish</h3>
+        <p>A towering, molten tomato pie loved by true Chicagoans and food lovers alike.</p>
+      </div>
+    </div>
+
+    <!-- Grid 2 -->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+      <div class="w3-quarter">
+        <img src="Nashville Food Burgers.jpg" alt="Nashville Burgers" style="width:100%">
+        <h3>Nashville Hot Chicken</h3>
+        <p>Spicy, fiery, and delicious. Not for the faint of heart but oh-so rewarding.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="California Food Buritto.jpg" alt="California Burrito" style="width:100%">
+        <h3>California Burrito</h3>
+        <p>Steak, fries, cheese, guac — all grilled together in one epic tortilla.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="Memphis Barbecue Food.jpg" alt="Memphis BBQ" style="width:100%">
+        <h3>Memphis BBQ</h3>
+        <p>Slow-smoked ribs, pulled pork, sweet & tangy sauce. Pure Southern magic.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="Jamaican Food.jpg" alt="Jamaican Jerk" style="width:100%">
+        <h3>Jamaican Jerk Chicken</h3>
+        <p>Smoky, spicy, and bold — the signature dish of Jamaica, reimagined with real flavor.</p>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="w3-center w3-padding-32">
+      <div class="w3-bar">
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+        <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h3>FOOTER</h3>
+      <p>Celestial food for the soul. They say the way to a man’s heart is through his stomach — I believe it.</p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3schools</a>.</p>
+    </div>
+
+    <div class="w3-third">
+      <h3>Food Blog Posts</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="Food Blog Posts.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Soul Food Cravings</span><br>
+          <span>Mouth-watering flavors that satisfy every craving.</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="Food Blog Posts 1.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">CHOMP. CHOMP!</span><br>
+          <span>Food so good, you’ll eat with your eyes closed.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>Food Tags</h3>
+      <p>
+        <span class="w3-tag">Good Food</span>
+        <span class="w3-tag w3-dark-grey">New York</span>
+        <span class="w3-tag w3-dark-grey">Jambalaya</span>
+        <span class="w3-tag w3-dark-grey">Chicken</span>
+        <span class="w3-tag w3-dark-grey">Pizza</span>
+        <span class="w3-tag w3-dark-grey">Barbecue</span>
+        <span class="w3-tag w3-dark-grey">Steak</span>
+        <span class="w3-tag w3-dark-grey">Cuisine</span>
+      </p>
+    </div>
+  </footer>
+</div>
+
+<!-- Sidebar Script -->
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
+
